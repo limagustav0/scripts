@@ -1,0 +1,7 @@
+# efetuar calculo do vl_tb_kami para item de pedido, só está calculando para item nota fiscal
+# retirar condicional  WHERE `cod_empresa`=2; do grupo de produtos
+
+#Válido pra nota fiscal e pedido
+vl_tb_kami -> Preço unitário padrão (sem descontos)
+vl_total_item_tb_kami -> preço total padrão do item (vl_tb_kami * qtd)
+vl_total_tb_kami -> preço total da nota ou do pedido (soma do valor total de todos itens)
