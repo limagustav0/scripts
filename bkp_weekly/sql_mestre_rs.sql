@@ -19,7 +19,7 @@ ELSE  "0" END from fn_titulo_receber as recebe where recebe.cod_cliente = client
 
 ,(select DATE_FORMAT(max(nf2.dt_emissao),'%d/%m/%Y') from vd_nota_fiscal as nf2 where cliente.cod_cliente = nf2.cod_cliente and nf2.situacao < 81 and nf2.cod_empresa in (2) and nf2.nop in ("6.102","6.404","BLACKFRIDAY","VENDA","VENDA_S_ESTOQUE","WORKSHOP")) as dt_ultima_compra
 
-,(select DATE_FORMAT(min(nf2.dt_emissao),'%d/%m/%Y') from vd_nota_fiscal as nf2 where cliente.cod_cliente = nf2.cod_cliente and nf2.situacao < 81 and nf2.cod_empresa in (6) and nf2.nop in ("6.102","6.404","BLACKFRIDAY","VENDA","VENDA_S_ESTOQUE","WORKSHOP")) as dt_primeira_compra
+,(select DATE_FORMAT(min(nf2.dt_emissao),'%d/%m/%Y') from vd_nota_fiscal as nf2 where cliente.cod_cliente = nf2.cod_cliente and nf2.situacao < 81 and nf2.cod_empresa in (2) and nf2.nop in ("6.102","6.404","BLACKFRIDAY","VENDA","VENDA_S_ESTOQUE","WORKSHOP")) as dt_primeira_compra
 
 ,(select count(distinct nf2.dt_emissao) from vd_nota_fiscal as nf2 where cliente.cod_cliente = nf2.cod_cliente and nf2.situacao < 81 and nf2.cod_empresa in (2) and nf2.nop in ("6.102","6.404","BLACKFRIDAY","VENDA","VENDA_S_ESTOQUE","WORKSHOP")) as qtd_total_compras
 

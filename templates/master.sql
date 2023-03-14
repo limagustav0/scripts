@@ -29,6 +29,7 @@ ELSE  "0" END FROM fn_titulo_receber AS recebe WHERE recebe.cod_cliente = client
 
 {{ months_values }}
 
+
 FROM
 cd_cliente AS cliente
 LEFT JOIN cd_cliente_endereco AS endereco ON (cliente.cod_cliente = endereco.cod_cliente AND endereco.tp_endereco = "E")

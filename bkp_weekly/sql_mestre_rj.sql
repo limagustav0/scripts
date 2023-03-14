@@ -265,7 +265,7 @@ where
 group by  cliente.cod_cliente
 
 
-#SELECT DATE_FORMAT(dt_emissao,'%d/%m/%Y'), dt_emissao from vd_nota_fiscal where cod_nota_fiscal = 21707
+SELECT DATE_FORMAT(dt_emissao,'%d/%m/%Y'), dt_emissao from vd_nota_fiscal where cod_nota_fiscal = 21707
 
 INTO OUTFILE 'csv/mestres_rj.csv'
 CHARACTER SET utf8
